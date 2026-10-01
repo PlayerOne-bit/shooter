@@ -7,3 +7,13 @@ playerone-bit.github.io/shooter
 ```
 ### then __PASTE__ it here:
 ![](ss.png)
+
+### If you want to add a template platform copy this:
+```html
+<div class="platform" style="
+        top: ___px;
+        bottom: ___px;
+        left: ___px;
+        right: ___px;
+    "></div>
+```

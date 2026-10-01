@@ -55,52 +55,29 @@
 </head>
 
 <body>
-
     <div class="wall-left"></div>
     <div class="wall-right"></div>
     <div class="ground"></div>
 
-    <script>
-        function createPlatforms(platforms) {
-            platforms.forEach(platformData => {
-                const platform = document.createElement("div");
-
-                platform.classList.add("platform");
-
-                if (platformData.top !== undefined)
-                    platform.style.top = platformData.top;
-
-                if (platformData.bottom !== undefined)
-                    platform.style.bottom = platformData.bottom;
-
-                if (platformData.left !== undefined)
-                    platform.style.left = platformData.left;
-
-                if (platformData.right !== undefined)
-                    platform.style.right = platformData.right;
-
-                document.body.appendChild(platform);
-            });
-        }
-        createPlatforms([
-            {
-                top: "100px",
-                left: "100px"
-            },
-            {
-                bottom: "200px",
-                right: "100px"
-            },
-            {
-                bottom: "200px",
-                left: "50%"
-            },
-            {
-                left:"15%",
-                bottom: "200px"
-            }
-        ]);
-    </script>
-
+    <div class="platform" style="
+        bottom: 200px;
+        left: 25%;
+    "></div>
+    <div class="platform" style="
+        bottom: 200px;
+        right: 25%;
+    "></div>
+    <div class="platform" style="
+        bottom: 400px;
+        left: 50%;
+    "></div>
+    <div class="platform" style="
+        top: 200px;
+        left: 15%;
+    "></div>
+    <div class="platform" style="
+        top: 200px;
+        right: 15%;
+    "></div>
 </body>
 </html>
