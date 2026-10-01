@@ -1,2 +1,2 @@
 # shooter
-A map for [destroy.spritefusion.com](destroy.spritefusion.com)
+A map for [destroy.spritefusion.com](https://destroy.spritefusion.com)
