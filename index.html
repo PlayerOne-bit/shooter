@@ -61,55 +61,45 @@
     <div class="ground"></div>
 
     <script>
-        function createPlatform({
-            top = null,
-            bottom = null,
-            left = null,
-            right = null
-        }) {
-            const platform = document.createElement("div");
+        function createPlatforms(platforms) {
+            platforms.forEach(platformData => {
+                const platform = document.createElement("div");
 
-            platform.classList.add("platform");
+                platform.classList.add("platform");
 
-            if (top !== null)
-                platform.style.top = top;
+                if (platformData.top !== undefined)
+                    platform.style.top = platformData.top;
 
-            if (bottom !== null)
-                platform.style.bottom = bottom;
+                if (platformData.bottom !== undefined)
+                    platform.style.bottom = platformData.bottom;
 
-            if (left !== null)
-                platform.style.left = left;
+                if (platformData.left !== undefined)
+                    platform.style.left = platformData.left;
 
-            if (right !== null)
-                platform.style.right = right;
+                if (platformData.right !== undefined)
+                    platform.style.right = platformData.right;
 
-            document.body.appendChild(platform);
-
-            return platform;
+                document.body.appendChild(platform);
+            });
         }
-
-
-        // Examples:
-
-        createPlatform({
-            top: "200px",
-            left: "100px"
-        });
-
-        createPlatform({
-            top: "300px",
-            right: "100px"
-        });
-
-        createPlatform({
-            bottom: "200px",
-            left: "50%"
-        });
-
-        createPlatform({
-            bottom: "300px",
-            right: "200px"
-        });
+        createPlatforms([
+            {
+                top: "100px",
+                left: "100px"
+            },
+            {
+                bottom: "200px",
+                right: "100px"
+            },
+            {
+                bottom: "200px",
+                left: "50%"
+            },
+            {
+                left:"15%",
+                bottom: "200px"
+            }
+        ]);
     </script>
 
 </body>
