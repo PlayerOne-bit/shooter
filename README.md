@@ -1,4 +1,4 @@
-# shooter
+# How to Play?
 A map for [destroy.spritefusion.com](https://destroy.spritefusion.com)
 
 ### You have to __COPY__ this link first:
