@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shooter Game</title>
+
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #111;
+        }
+
         .wall-left {
-            
             position: absolute;
             top: 0;
             left: 0;
             width: 20px;
             height: 100%;
-            background-color: #333;
+            background: #333;
         }
 
         .wall-right {
@@ -21,17 +33,14 @@
             right: 0;
             width: 20px;
             height: 100%;
-            background-color: #333;
+            background: #333;
         }
 
         .platform {
             position: absolute;
-            bottom: 200px;
-            left: 50%;
-            transform: translateX(-50%);
             width: 200px;
             height: 20px;
-            background-color: #555;
+            background: #555;
         }
 
         .ground {
@@ -40,14 +49,68 @@
             left: 0;
             width: 100%;
             height: 100px;
-            background-color: #555;
+            background: #555;
         }
     </style>
 </head>
+
 <body>
+
     <div class="wall-left"></div>
     <div class="wall-right"></div>
-    <div class="platform"></div>
     <div class="ground"></div>
+
+    <script>
+        function createPlatform({
+            top = null,
+            bottom = null,
+            left = null,
+            right = null
+        }) {
+            const platform = document.createElement("div");
+
+            platform.classList.add("platform");
+
+            if (top !== null)
+                platform.style.top = top;
+
+            if (bottom !== null)
+                platform.style.bottom = bottom;
+
+            if (left !== null)
+                platform.style.left = left;
+
+            if (right !== null)
+                platform.style.right = right;
+
+            document.body.appendChild(platform);
+
+            return platform;
+        }
+
+
+        // Examples:
+
+        createPlatform({
+            top: "200px",
+            left: "100px"
+        });
+
+        createPlatform({
+            top: "300px",
+            right: "100px"
+        });
+
+        createPlatform({
+            bottom: "200px",
+            left: "50%"
+        });
+
+        createPlatform({
+            bottom: "300px",
+            right: "200px"
+        });
+    </script>
+
 </body>
 </html>
