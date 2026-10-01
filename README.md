@@ -17,3 +17,91 @@ playerone-bit.github.io/shooter
         right: ___px;
     "></div>
 ```
+
+
+## index.html
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shooter Game</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 500vh;
+            overflow: hidden;
+            background: #111;
+        }
+
+        .wall-left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 100%;
+            background: #333;
+        }
+
+        .wall-right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 100%;
+            background: #333;
+        }
+
+        .platform {
+            position: absolute;
+            width: 200px;
+            height: 20px;
+            background: #555;
+        }
+
+        .ground {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wall-left"></div>
+    <div class="wall-right"></div>
+    <div class="ground"></div>
+
+    <div class="platform" style="
+        bottom: 200px;
+        left: 25%;
+    "></div>
+    <div class="platform" style="
+        bottom: 200px;
+        right: 25%;
+    "></div>
+    <div class="platform" style="
+        bottom: 400px;
+        left: 40%;
+    "></div>
+    <div class="platform" style="
+        top: 200px;
+        left: 15%;
+    "></div>
+    <div class="platform" style="
+        top: 200px;
+        right: 15%;
+    "></div>
+</body>
+</html>
+```
